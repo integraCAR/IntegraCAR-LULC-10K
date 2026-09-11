@@ -62,6 +62,8 @@
                             data-i18n="nav-nomenclature">Nomenclature</a></li>
                     <li class="nav-item px-lg-3"><a class="nav-link ben-nav-link" href="#benchmarks"
                             data-i18n="nav-benchmarks">Benchmarks</a></li>
+                    <li class="nav-item px-lg-3"><a class="nav-link ben-nav-link" href="#models"
+                            data-i18n="nav-models">Models</a></li>
                     <li class="nav-item px-lg-3"><a class="nav-link ben-nav-link" href="#download"
                             data-i18n="nav-download">Download</a></li>
                     <li class="nav-item px-lg-3"><a class="nav-link ben-nav-link" href="#contact"
@@ -570,8 +572,74 @@
         </div>
     </section>
 
+    <!-- ===================== MODEL REPOSITORY ===================== -->
+    <section id="models" class="ben-section ben-section-alt">
+        <div class="container fade-in-up">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <h2 class="ben-section-title text-center mb-5" data-i18n="model-section-title">Model Repository & Source Code</h2>
+                    <div class="row align-items-center g-5 flex-lg-row-reverse">
+                        <div class="col-lg-6">
+                            <h3 class="h4 fw-bold mb-3" data-i18n="model-title">Open Source Training Code & Weights</h3>
+                            <p class="ben-section-text text-justify" data-i18n="model-desc">
+                                To complement the IntegraCAR-LULC dataset, we provide the complete source code used to train and evaluate our baseline semantic segmentation models. The repository includes implementations of U-Net and DeepLabv3 architectures, data loading pipelines, training scripts, and pre-trained weights. This allows researchers to easily reproduce our benchmarks or fine-tune the models for specific environmental applications.
+                            </p>
+                            <div class="mt-4">
+                                <a href="#" class="btn btn-outline-dark fw-bold" target="_blank" rel="noopener">
+                                    <i class="bi bi-github me-2"></i><span data-i18n="model-btn">View Model Repository on GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-4 rounded-3 shadow-sm border bg-white">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="d-flex align-items-start mb-4">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="bi bi-diagram-3-fill text-primary fs-3"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <h6 class="fw-bold mb-1" data-i18n="model-feat-1-title" style="color: #0a1b2b;">Architectures</h6>
+                                            <p class="mb-0 text-muted" data-i18n="model-feat-1-desc" style="font-size: 0.95rem;">Implementation of U-Net (EfficientNet-B5) and DeepLabv3 (ResNet-50) using PyTorch.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-4">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="bi bi-box-seam-fill text-primary fs-3"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <h6 class="fw-bold mb-1" data-i18n="model-feat-2-title" style="color: #0a1b2b;">Pre-trained Weights</h6>
+                                            <p class="mb-0 text-muted" data-i18n="model-feat-2-desc" style="font-size: 0.95rem;">Ready-to-use checkpoints for immediate inference and transfer learning on your own data.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-4">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="bi bi-terminal-fill text-primary fs-3"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <h6 class="fw-bold mb-1" data-i18n="model-feat-3-title" style="color: #0a1b2b;">Training Pipeline</h6>
+                                            <p class="mb-0 text-muted" data-i18n="model-feat-3-desc" style="font-size: 0.95rem;">Automated scripts for data augmentation, distributed training, and validation.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="bi bi-bar-chart-fill text-primary fs-3"></i>
+                                        </div>
+                                        <div class="ms-4">
+                                            <h6 class="fw-bold mb-1" data-i18n="model-feat-4-title" style="color: #0a1b2b;">Reproducibility</h6>
+                                            <p class="mb-0 text-muted" data-i18n="model-feat-4-desc" style="font-size: 0.95rem;">Standardized environment setup and config files to accurately reproduce our benchmarks.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===================== DOWNLOAD ===================== -->
-    <section id="download" class="ben-section ben-section-alt">
+    <section id="download" class="ben-section">
         <div class="container fade-in-up">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
@@ -597,7 +665,7 @@
                                         <span data-i18n="dl-opt1-fmt">Raw images paired with rasterized segmentation
                                             masks.</span></p>
                                     <div class="mt-auto">
-                                        <a href="#" class="btn btn-dark w-100 fw-bold" data-i18n="dl-opt1-btn">Download
+                                        <a href="https://huggingface.co/datasets/laicsiifes/IntegraCAR-LULC-10K" class="btn btn-dark w-100 fw-bold" target="_blank" data-i18n="dl-opt1-btn">Download
                                             10K Dataset</a>
                                     </div>
                                 </div>
@@ -625,7 +693,7 @@
                                         <span data-i18n="dl-opt2-fmt">Same technical standard of images and masks at
                                             2048×2048 pixels.</span></p>
                                     <div class="mt-auto">
-                                        <a href="#" class="btn btn-dark w-100 fw-bold" data-i18n="dl-opt2-btn">Download
+                                        <a href="https://huggingface.co/datasets/laicsiifes/IntegraCAR-LULC-500" class="btn btn-dark w-100 fw-bold" target="_blank" data-i18n="dl-opt2-btn">Download
                                             500 Subset</a>
                                     </div>
                                 </div>
@@ -939,6 +1007,22 @@
             "bench-th-freq": { en: "Dataset Freq. (%)", pt: "Frequência no Dataset (%)" },
             "bench-note-lbl": { en: "Note:", pt: "Nota:" },
             "bench-note-text": { en: "Deep Learning models find strong consistency in dominant classes (Agropastoral and Vegetation Areas), while the transitional class 'Macega' and fragmented 'Infrastructure' structures represent main open challenges due to spectral similarity in single-date RGB images.", pt: "Modelos de Deep Learning encontram forte consistência nas classes dominantes (Áreas Agropecuárias e de Vegetação), enquanto a classe transitória 'Macega' e estruturas fragmentadas de 'Infraestrutura' representam os principais desafios em aberto devido à similaridade espectral em imagens RGB de data única." },
+            "nav-models": { en: "Models", pt: "Modelos" },
+            "model-section-title": { en: "Model Repository & Source Code", pt: "Repositório de Modelos e Código-Fonte" },
+            "model-title": { en: "Open Source Training Code & Weights", pt: "Código de Treinamento e Pesos Open Source" },
+            "model-desc": { 
+                en: "To complement the IntegraCAR-LULC dataset, we provide the complete source code used to train and evaluate our baseline semantic segmentation models. The repository includes implementations of U-Net and DeepLabv3 architectures, data loading pipelines, training scripts, and pre-trained weights. This allows researchers to easily reproduce our benchmarks or fine-tune the models for specific environmental applications.",
+                pt: "Para complementar o dataset IntegraCAR-LULC, disponibilizamos o código-fonte completo utilizado para treinar e avaliar nossos modelos base de segmentação semântica. O repositório inclui implementações das arquiteturas U-Net e DeepLabv3, pipelines de carregamento de dados, scripts de treinamento e pesos pré-treinados. Isso permite que pesquisadores reproduzam facilmente nossos benchmarks ou façam fine-tuning dos modelos para aplicações ambientais específicas."
+            },
+            "model-btn": { en: "View Model Repository on GitHub", pt: "Ver Repositório do Modelo no GitHub" },
+            "model-feat-1-title": { en: "Architectures", pt: "Arquiteturas" },
+            "model-feat-1-desc": { en: "Implementation of U-Net (EfficientNet-B5) and DeepLabv3 (ResNet-50) using PyTorch.", pt: "Implementação de U-Net (EfficientNet-B5) e DeepLabv3 (ResNet-50) usando PyTorch." },
+            "model-feat-2-title": { en: "Pre-trained Weights", pt: "Pesos Pré-treinados" },
+            "model-feat-2-desc": { en: "Ready-to-use checkpoints for immediate inference and transfer learning on your own data.", pt: "Checkpoints prontos para uso em inferência imediata e transfer learning em seus próprios dados." },
+            "model-feat-3-title": { en: "Training Pipeline", pt: "Pipeline de Treinamento" },
+            "model-feat-3-desc": { en: "Automated scripts for data augmentation, distributed training, and validation.", pt: "Scripts automatizados para data augmentation, treinamento distribuído e validação." },
+            "model-feat-4-title": { en: "Reproducibility", pt: "Reprodutibilidade" },
+            "model-feat-4-desc": { en: "Standardized environment setup and config files to accurately reproduce our benchmarks.", pt: "Configuração de ambiente padronizada e arquivos de configuração para reproduzir com precisão nossos benchmarks." },
             "dl-title": { en: "Download", pt: "Download" },
             "dl-lbl-desc": { en: "Description:", pt: "Descrição:" },
             "dl-lbl-ideal": { en: "Ideal for:", pt: "Ideal para:" },
