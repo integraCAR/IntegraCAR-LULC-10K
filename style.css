@@ -169,21 +169,38 @@ a:hover { color: #00537d; text-decoration: underline; }
 }
 
 /* Hero buttons */
+.ben-hero-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.ben-hero-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 240px;
+}
+
 .ben-btn-primary {
   background-color: #0096E1; /* ES Blue */
-  border: none;
+  border: 1.5px solid #0096E1;
   color: #ffffff;
   font-weight: 600;
   font-size: 0.92rem;
   letter-spacing: 0.04em;
   padding: 0.65rem 1.6rem;
   border-radius: 4px;
-  transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.15s, box-shadow 0.2s;
   text-transform: uppercase;
 }
 
 .ben-btn-primary:hover {
   background-color: #007bbd; /* Darker ES Blue */
+  border-color: #007bbd;
   color: #fff;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(0,150,225,0.35);
@@ -192,14 +209,14 @@ a:hover { color: #00537d; text-decoration: underline; }
 
 .ben-btn-outline {
   background: transparent;
-  border: 1.5px solid rgba(255,255,255,0.6);
-  color: rgba(255,255,255,0.9);
-  font-weight: 500;
+  border: 1.5px solid rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.95);
+  font-weight: 600;
   font-size: 0.92rem;
   letter-spacing: 0.04em;
   padding: 0.65rem 1.6rem;
   border-radius: 4px;
-  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.15s;
   text-transform: uppercase;
 }
 
@@ -580,7 +597,7 @@ a:hover { color: #00537d; text-decoration: underline; }
    ============================================================ */
 @media (max-width: 767px) {
   .ben-masthead { min-height: 320px; padding: 3.5rem 0 3rem; }
-  .ben-hero-buttons .btn { display: block; width: 100%; margin: 0.4rem 0 !important; }
+  .ben-hero-buttons .btn { width: 100%; max-width: 280px; margin: 0 !important; }
   .ben-news-box { flex-direction: column; gap: 0.8rem; }
   .ben-about-block { border-left: 3px solid #0096E1; padding-left: 1rem; }
   .ben-section { padding: 3rem 0; }
